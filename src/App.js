@@ -38,13 +38,9 @@ function App() {
 
   const addTask = (userInput) => {
     let copy = [...toDoList]; 
-    let number = toDoList.map(task => {
-      return task.id
-    })
-  let lengthData = toDoList.length + 1
+    let lengthData = toDoList.length + 1
     copy = userInput == '' ? [...copy] : [...copy, { id: lengthData, task: userInput, complete: false }];
     setToDoList(copy);
-    console.log(number);
   }
 
   return (
